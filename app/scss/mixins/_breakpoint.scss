@@ -1,0 +1,22 @@
+@mixin breakpoint($point) {
+    @if $point == desktops {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $point == middle {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point == tablets {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point == landscape {
+        @media (min-width: 568px) {
+            @content;
+        }
+    }
+}

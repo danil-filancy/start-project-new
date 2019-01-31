@@ -1,0 +1,135 @@
+/* ==========================================================================
+Navigation
+========================================================================== */
+.header-nav.open {
+    visibility: visible;
+    opacity: 0.9;
+    transition: opacity 0.5s; 
+}
+.nav-toggle {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 999999;
+    padding: 10px 35px 16px 0;
+    cursor: pointer; 
+}
+.nav-toggle:focus {
+    outline: none; 
+}
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 3px;
+    border-radius: 1px;
+    background: #fff;
+    cursor: pointer; 
+}
+.nav-toggle span:before {
+    top: -10px; 
+}
+.nav-toggle span:after {
+    bottom: -10px; 
+}
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+    transition: all 300ms ease-in-out; 
+}
+  
+.nav-toggle.active span {
+    background-color: transparent; 
+}
+  
+.nav-toggle.active span:before, .nav-toggle.active span:after {
+    top: 0; 
+}
+.nav-toggle.active span:before {
+    transform: rotate(45deg); 
+}
+.nav-toggle.active span:after {
+    top: 10px;
+    transform: translatey(-10px) rotate(-45deg);
+}
+.navicon {
+    position: absolute;
+    height: 26px;
+    right: 10px;
+    top: 48px;
+    visibility: hidden;
+    transition: all 300ms ease-in-out; 
+}
+.navigation {
+    transition: all 300ms ease-in-out;
+    position: fixed;
+    width: 100%;
+    z-index: 999; 
+}          
+.fixed {
+    position: fixed;
+    background-color: #232731;
+    z-index: 999;
+    width: 100%
+}         
+header{
+    padding: 50px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+    transition: padding 300ms ease-in-out; 
+}
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px; 
+}
+header a.login {
+    margin-right: 20px; 
+}
+header .logo {
+    display: inline-block; 
+}
+header ul.primary-nav {
+    margin: 0 0 0 75px;
+    padding: 0; 
+}
+header ul.primary-nav li {
+    display: inline; 
+}
+header ul.primary-nav li a {
+    color: #fff;
+    padding-right: 25px; 
+}
+header ul.primary-nav li a:hover {
+    color: #FF5274;
+}
+header ul.primary-nav li:last-child a {
+    padding-right: 0px;
+}
+header ul.member-actions li {
+    display: inline; 
+}
+header ul.member-actions li a {
+    color: #fff; 
+}
+header ul.member-actions li a:hover {
+    color: #FF5274; 
+}
+header .header-nav {
+    display: inline-block; 
+}
+header .member-actions {
+    position: absolute;
+    right: 0;
+    top: 41px;
+    transition: all 300ms ease-in-out; 
+}          
+.down-arrow {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); 
+}
